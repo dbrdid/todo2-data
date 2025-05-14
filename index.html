@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko"> <!-- 문서 언어 설정 (한국어) -->
+<head>
+  <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 문자 인코딩 설정 -->
+  <meta charset="UTF-8" />
+  <!-- 반응형 웹을 위한 뷰포트 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 웹페이지 제목 -->
+  <title>To-Do List with Categories</title>
+
+  <!-- 인라인 CSS 스타일 정의 -->
+  <style>
+    /* 전체 요소 박스 사이즈 조정 */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* 기본 바디 스타일 */
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 컨테이너 박스 스타일 */
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* 제목 스타일 */
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* 입력창 스타일 */
+    input {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    /* 버튼 기본 스타일 */
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    /* 버튼 hover 시 효과 */
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* 리스트 기본 스타일 제거 */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    /* 각 할 일 항목 스타일 */
+    li {
+      background: #f1f1f1;
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* 버튼 묶음 스타일 */
+    .task-buttons button {
+      margin-right: 8px;
+      background-color: #2196f3; /* 기본 버튼 색: 파란색 */
+    }
+
+    /* 마지막 버튼 (삭제 버튼)만 빨간색 */
+    .task-buttons button:last-child {
+      background-color: #de1d0f;
+    }
+
+    /* 버튼 hover 시 살짝 투명하게 */
+    .task-buttons button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <!-- 전체 콘텐츠를 감싸는 컨테이너 -->
+  <div class="container">
+    <h1>📝 나의 To-Do List</h1>
+    
+    <form if=""taskForm> 
+      <input type="text" id="title" placeholder="할 일 입력" required>
+      <input type="text" id="category" placeholder="카테고리" required>
+      <input type="date" id="date" required>
+      <select id="priority">  // 우선순위 선택
+        <option value="1">낮음</option>
+        <option value="2">보통</option>
+        <option value="3">높음</option>
+        <option value="4">매우 높음</option>
+        <option value="5">최우선</option>
+      </select>
+      <button type="submit">추가</button>
+    </form>
+
+    <div id="taskLiust"></div> <!-- 할 일 목록을 표시할 리스트 -->
+  </div>
+
+  <script src="app.js"></script>> <!-- 자바스크립트 파일 연결 -->
+  </div>
+</body>
+</html>
